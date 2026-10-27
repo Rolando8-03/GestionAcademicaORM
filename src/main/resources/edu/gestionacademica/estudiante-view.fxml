@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.gestionacademica.controller.EstudianteController">
+    <top>
+        <VBox styleClass="encabezado" spacing="7">
+            <Label text="GESTIÓN ACADÉMICA" styleClass="marca"/>
+            <Label text="Registro de estudiantes" styleClass="titulo"/>
+            <Label text="Universidad Americana" styleClass="subtitulo"/>
+        </VBox>
+    </top>
+    <left>
+        <VBox spacing="16" prefWidth="310" styleClass="panel-formulario">
+            <Label text="Nuevo estudiante" styleClass="seccion"/>
+            <VBox fx:id="formulario" spacing="7">
+                <Label text="Nombres *"/><TextField fx:id="txtNombres" promptText="Ingrese los nombres"/>
+                <Label text="Apellidos *"/><TextField fx:id="txtApellidos" promptText="Ingrese los apellidos"/>
+                <Label text="Correo electrónico *"/><TextField fx:id="txtCorreo" promptText="estudiante@uam.edu.ni"/>
+                <Label text="Carrera *"/><ComboBox fx:id="cmbCarrera" maxWidth="Infinity" promptText="Seleccione o escriba una carrera"/>
+                <Label text="Teléfono"/><TextField fx:id="txtTelefono" promptText="Opcional · solo dígitos"/>
+            </VBox>
+            <Label text="* Campos obligatorios" styleClass="texto-secundario"/>
+            <Button fx:id="btnGuardar" text="Guardar estudiante" maxWidth="Infinity" onAction="#guardar" styleClass="primario"/>
+            <Button fx:id="btnLimpiar" text="Limpiar formulario" maxWidth="Infinity" onAction="#limpiar"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="16" styleClass="contenido">
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <Label text="Estudiantes registrados" styleClass="seccion"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="lblCantidad" text="0 estudiantes" styleClass="texto-secundario"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Carrera"/>
+                <ComboBox fx:id="cmbFiltroCarrera" prefWidth="290"/>
+                <Button fx:id="btnConsultar" text="Consultar" onAction="#consultar" styleClass="primario"/>
+            </HBox>
+            <TableView fx:id="tablaEstudiantes" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="55" minWidth="45"/>
+                    <TableColumn fx:id="colNombres" text="Nombres" prefWidth="130"/>
+                    <TableColumn fx:id="colApellidos" text="Apellidos" prefWidth="140"/>
+                    <TableColumn fx:id="colCorreo" text="Correo electrónico" prefWidth="210"/>
+                    <TableColumn fx:id="colCarrera" text="Carrera" prefWidth="235"/>
+                    <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="110"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ProgressIndicator fx:id="progreso" visible="false" prefWidth="20" prefHeight="20"/>
+                <Label fx:id="lblEstado" text="Listo" styleClass="texto-secundario"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

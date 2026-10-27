@@ -1,0 +1,25 @@
+.root { -fx-font-family: "Segoe UI", sans-serif; -fx-font-size: 13px; -fx-background-color: #f3f6fa; -fx-text-fill: #172c43; }
+.encabezado { -fx-padding: 25 30; -fx-background-color: #142e4b; }
+.marca { -fx-text-fill: #79c6d4; -fx-font-size: 11px; -fx-font-weight: bold; }
+.titulo { -fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold; }
+.subtitulo { -fx-text-fill: #c3d5e8; }
+.panel-formulario { -fx-padding: 26 24; -fx-background-color: white; -fx-border-color: transparent #dbe4ef transparent transparent; }
+.contenido { -fx-padding: 26 24; }
+.seccion { -fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #142e4b; }
+.texto-secundario { -fx-text-fill: #52667e; -fx-font-size: 12px; }
+.text-field, .combo-box { -fx-pref-height: 36px; -fx-background-color: white; -fx-border-color: #bdcbdb; -fx-border-radius: 5; -fx-background-radius: 5; }
+.text-field:focused, .combo-box:focused { -fx-border-color: #147d91; }
+.combo-box .text-field { -fx-border-color: transparent; -fx-background-color: transparent; }
+.button { -fx-pref-height: 37px; -fx-padding: 8 18; -fx-background-color: #e7edf5; -fx-text-fill: #223b57; -fx-background-radius: 5; -fx-cursor: hand; }
+.button:hover { -fx-background-color: #d6e1ef; }
+.primario { -fx-background-color: #146e83; -fx-text-fill: white; -fx-font-weight: bold; }
+.primario:hover { -fx-background-color: #11596b; }
+.table-view { -fx-background-color: white; -fx-border-color: #dbe4ef; -fx-background-radius: 6; -fx-border-radius: 6; }
+.table-view .column-header, .table-view .filler { -fx-background-color: #e8eef6; -fx-size: 40px; }
+.table-view .column-header .label { -fx-text-fill: #243d59; -fx-alignment: CENTER_LEFT; -fx-padding: 0 8; }
+.table-row-cell { -fx-cell-size: 39px; -fx-background-color: white; }
+.table-row-cell:odd { -fx-background-color: #f5f8fc; }
+.table-row-cell:selected { -fx-background-color: #d4eaf0; }
+.table-row-cell:selected .text { -fx-fill: #142e4b; }
+.table-cell { -fx-padding: 10 8; -fx-border-color: transparent; }
+.progress-indicator { -fx-progress-color: #146e83; }

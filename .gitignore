@@ -1,0 +1,5 @@
+/target/
+/.idea/
+*.iml
+/config/hibernate-local.properties
+.env
